@@ -13,10 +13,14 @@ cask "minicat" do
   name "MiniCat"
   homepage "https://github.com/iKrelve/minicat-releases"
 
-  no_quarantine
   depends_on macos: ">= :big_sur"
 
   app "小萨猫.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/小萨猫.app"]
+  end
 
   zap trash: [
     "~/.minicat",
