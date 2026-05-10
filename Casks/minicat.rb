@@ -2,10 +2,10 @@
 # frozen_string_literal: true
 
 cask "minicat" do
-  version "1.0.107"
+  version "1.0.108"
 
   on_arm do
-    sha256 "1e65cef32bcc1bd1d12caf5ec2fbbed7bf6ded306c5050234fb8240671db102c"
+    sha256 "17b05f8c3739b94bf8e7fddf2ab06e0635b25d25a66292d6b8cfca468671ada5"
 
     url "https://github.com/iKrelve/minicat-releases/releases/download/v#{version}/MiniCat-#{version}-arm64.dmg"
   end
